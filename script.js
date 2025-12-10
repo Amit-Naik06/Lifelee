@@ -1,4 +1,6 @@
-function showOrderMessage() {
-    document.getElementById("orderMsg").innerText =
-      "Thank you! You can place your order through the email mentioned above.";
+function orderProduct(productName) {
+    const phone = "9850038125";  // <--- put your WhatsApp number here (without +)
+    const message = `Hello, I want to order: ${productName}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
 }
